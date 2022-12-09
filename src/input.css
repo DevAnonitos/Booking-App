@@ -18,6 +18,11 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }

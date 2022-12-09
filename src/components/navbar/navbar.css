@@ -2,13 +2,42 @@
     display: flex;
     justify-content: center;
     height: var(--height-navbar);
-    background: #000428;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+    background: #010a58;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #004e92, #020b57);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 24px;
     width: 100%;
     max-width: 1024px;
     color: #ffffff;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #FFC312;
+    cursor: pointer;
+}
+
+.navButton {
+    margin-left: 20px;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+    background-color: #ED4C67;
+    color: #003580;
+    transition: all 0.3s ease-in-out;
+}
+
+.navButton:hover {
+    color: #fff;
+    background-color: #f1bf2b;
 }
