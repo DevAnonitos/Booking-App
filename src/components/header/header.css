@@ -101,4 +101,15 @@
     font-size: 1.6rem;
 }
 
+.headerSearchText {
+    color: #a4b0be;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.dateHeaderSearch {
+    position: absolute;
+    top: 50px;
+}
+
 

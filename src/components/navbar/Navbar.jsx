@@ -8,6 +8,7 @@ const Navbar = () => {
 
   return (
     <div className='navbar'>
+      {/* ====================NAV=========================== */}
         <div className='navContainer'>
           <span className="logo">TravelBooking</span>
           <div className="navItems">

@@ -1,9 +1,29 @@
-import React from 'react';
-import { faBed, faPlane, faCar, faTaxi, faCalendarDays, faPerson, faSearch } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from 'react';
+import { 
+  faBed, faPlane, 
+  faCar, faTaxi, 
+  faCalendarDays, faPerson, 
+  faSearch } 
+from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { DateRange } from "react-date-range";
+import { format } from "date-fns";
+
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
+
 import "./header.css";
 
 const Header = () => {
+
+  const [date, setDate] = useState([
+    {
+      startDate: new Date(),
+      endDate: new Date(),
+      key: 'selection',
+    }
+  ]);
+
   return (
     <div className='header'>
       <div className="headerContainer">
@@ -29,7 +49,9 @@ const Header = () => {
               <FontAwesomeIcon icon={faTaxi} />
               <span>Airport taxis</span>
             </div>
+
         </div>
+        {/* =====================TITLE-HEADER=========================== */}
         <h1 className="headerTitle">
           A lifetime of discounts? It's Genius.
         </h1>
@@ -40,6 +62,7 @@ const Header = () => {
         <button className="headerBtn">
           Sign in / Register
         </button>
+        {/* ============================SEARCH-BAR======================= */}
         <div className="headerSearch">
           <div className="headerSearchItems">
             <FontAwesomeIcon icon={faBed} className="headerIcon" />
@@ -51,7 +74,14 @@ const Header = () => {
           </div>
           <div className="headerSearchItems">
             <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
-            <span className="headerSearchText">date to date</span>
+            <span className="headerSearchText">{`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(date[0].endDate, "MM/dd/yyyy")}`}</span>
+            <DateRange
+            	editableDateInputs={true}
+              onChange={(item) => setDate([!item.selection])}
+              moveRangeOnFirstSelection={false}
+              ranges={date}
+              className="dateHeaderSearch"
+            />
           </div>
           <div className="headerSearchItems">
             <FontAwesomeIcon icon={faPerson} className="headerIcon" />
@@ -64,8 +94,7 @@ const Header = () => {
             </button>
           </div>
         </div>
-      </div>
-      
+      </div>    
     </div>
   )
 }
