@@ -16,6 +16,8 @@ import "./header.css";
 
 const Header = () => {
 
+  const [openDate, setOpenDate] = useState(false);
+
   const [date, setDate] = useState([
     {
       startDate: new Date(),
