@@ -27,6 +27,20 @@
     padding: 10px;
     border-radius: 20px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.headerListItem.active{
+    background-color: #1289A7;
+}
+
+.headerListItem:hover{
+    animation: pulse;
+    -webkit-animation: pulse;
+    -o-animation: pulse;
+    -ms-animation: pulse;
+    background-color: #1289A7;
+    animation-duration: 2s;
 }
 
 .headerTitle {
@@ -138,4 +152,33 @@
     color: #000;
     font-weight: 400;
 }
+.optionCounterNumb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #FFC312;
+}
 
+
+.optionCounterBtn{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #0652DD;
+    background-color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.optionCounterBtn:disabled{
+    cursor: not-allowed;
+}
+
+.optionText{
+    font-size: 1.8rem;
+    font-weight: 500;
+    cursor: default;
+}
