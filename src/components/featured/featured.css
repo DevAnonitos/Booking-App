@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    z-index: 1;
 }
 
 .featuredItem{
@@ -11,11 +12,20 @@
     color: #FFFFFF;
     border-radius: 10px;
     overflow: hidden;
-    height: 250px;
+    height: 218px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .featuredImg{
     width: 100%;
     object-fit: cover;
+}
+
+.featuredTitle{
+    position: absolute;
+    bottom: 26px;
+    margin-left: 10px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    opacity: 0.8;
 }
