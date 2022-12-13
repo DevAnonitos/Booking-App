@@ -23,11 +23,11 @@
 }
   
 .pListTitles>h1{
-    font-size: 18px;
+    font-size: 1.8rem;
     color: #444;
 }
   
 .pListTitles>h2{
-    font-size: 14px;
+    font-size: 1.3rem;
     font-weight: 300;
 }
