@@ -7,7 +7,16 @@
 }
 
 .homeTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     width: 1024px;
     font-size: 2rem;
     font-weight: bold;
+    background: radial-gradient(#1B1464, #487eb0);
+    padding: 15px;
+    border-radius: 10px;
+    color: #FFC312;
 }
+
