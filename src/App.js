@@ -8,6 +8,17 @@ import Hotel from './pages/hotel/Hotel';
 import List from './pages/list/List';
 import 'animate.css';
 
+const scrollToTop = () => {
+  const c = document.documentElement.scrollTop || document.body.scrollTop;
+  if (c > 0) {
+    window.requestAnimationFrame(scrollToTop);
+    window.scrollTo(0, c - c / 8);
+  }
+};
+
+// Example
+scrollToTop();
+
 function App() {
 
   return (
