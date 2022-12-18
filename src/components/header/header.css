@@ -39,12 +39,8 @@
 }
 
 .headerListItem:hover{
-    animation: pulse;
-    -webkit-animation: pulse;
-    -o-animation: pulse;
-    -ms-animation: pulse;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
     background-color: #1289A7;
-    animation-duration: 2s;
 }
 
 .headerTitle {
