@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import { 
   faBed, faPlane, 
   faCar, faTaxi, 
@@ -17,6 +18,9 @@ import "./header.css";
 const Header = ({ type }) => {
   
   // ==================SET-LOGIC =================
+
+  const [destination, setDestination] = useState("");
+
   const [openDate, setOpenDate] = useState(false);
 
   const [date, setDate] = useState([
@@ -28,6 +32,8 @@ const Header = ({ type }) => {
   ]);
 
   const [openOptions, setOpenOptions] = useState(false);
+
+  const navigate = useNavigate();
 
   const [options, setOptions] = useState({
     adult: 1,
@@ -43,6 +49,10 @@ const Header = ({ type }) => {
       };
     });
   };
+
+  const handleSearch = () => {
+    navigate("/hotels", {state: {destination, date, options}})
+  }
 
 
   // ===================RETURN COMPONENTS==================
@@ -95,6 +105,7 @@ const Header = ({ type }) => {
                   type="text"
                   placeholder='Where are you want to go?'
                   className='headerSearchInput'
+                  onChange={e=>setDestination(e.target.value)}
                 />
               </div>
               <div className="headerSearchItems">
@@ -111,9 +122,6 @@ const Header = ({ type }) => {
                     onChange={(item) => setDate([item.selection])}
                     moveRangeOnFirstSelection={false}
                     ranges={date}
-                    rangeColors={["#55E6C1"]}
-                    color={["#B33771"]}
-                    showSelectionPreview={true}
                     className="dateHeaderSearch"
                   />
                 }
@@ -188,7 +196,10 @@ const Header = ({ type }) => {
                 }
               </div>
               <div className="headerSearchItems">
-                <button className="headerBtn-search">
+                <button 
+                  className="headerBtn-search"
+                  onClick={handleSearch}
+                >
                   <FontAwesomeIcon icon={faSearch} className="headerIcon" />
                   Search
                 </button>
