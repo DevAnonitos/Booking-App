@@ -14,6 +14,7 @@
 .listSearch{
     flex: 1.5;
     top: 10px;
+    height: 500px;
     position: sticky;
     padding: 10px;
     border-radius: 10px;
@@ -79,6 +80,7 @@
 }
 
 .listOptText{
+    font-size: 1.4rem;
     margin-right: 10px;
 }
 
@@ -93,7 +95,6 @@
     border-radius: 10px;
 }
   
-
 .listResult{
     flex: 3;
 }

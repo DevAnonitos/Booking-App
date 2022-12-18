@@ -8,6 +8,7 @@ import Header from '../../components/header/Header';
 
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
+import SearchItem from '../../components/searchItem/SearchItem';
 
 
 const List = () => {
@@ -52,15 +53,15 @@ const List = () => {
                   onChange={(item) => setDate([item.selection])}
                   minDate={new Date()}
                   ranges={date}
+                  className='z-50'
                 />
               )}
             </div>
-            <div className="listItems">
-              <label>Options</label>
+            <div className="lsOptionItem">
               <span className="listOptText">
                 Min price <small>per night</small>
               </span>
-              <input type="number" className='listOptInput' />
+              <input type="number" className="listOptInput" />
             </div>
             <div className="lsOptionItem">
               <span className="listOptText">
@@ -98,7 +99,17 @@ const List = () => {
             <button>Search</button>
           </div>
           <div className="listResult">
-
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
           </div>
         </div>
       </div>
